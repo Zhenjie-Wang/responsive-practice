@@ -1,0 +1,121 @@
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.topbar-wrapper {
+  height: 48px;
+  background-color: #000000;
+}
+.topbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 48px;
+  display: flex;
+  background-color: #000000;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
+}
+.topbar .left-menu {
+  width: 18px;
+  height: 15px;
+  margin-left: 16px;
+}
+.topbar .left-menu div {
+  width: 18px;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  transform-origin: left center;
+  transition: 0.3s;
+}
+.topbar .left-menu div:nth-child(1) {
+  top: 17px;
+}
+.topbar .left-menu div:nth-child(2) {
+  top: 23px;
+}
+.topbar .left-menu div:nth-child(3) {
+  top: 29px;
+}
+.topbar .left-menu .more-list {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding-top: 60px;
+}
+.topbar .left-menu .more-list li {
+  height: 48px;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 48px;
+  font-size: 14px;
+  border-bottom: 1px solid #555555;
+}
+.topbar .left-menu:active div:nth-child(1) {
+  transform: rotateZ(40deg);
+}
+.topbar .left-menu:active div:nth-child(2) {
+  opacity: 0;
+}
+.topbar .left-menu:active div:nth-child(3) {
+  transform: rotateZ(-40deg);
+}
+.topbar .left-menu:active .more-list {
+  display: block;
+}
+.topbar .logo a {
+  display: block;
+  text-indent: -9999px;
+  width: 122px;
+  height: 32px;
+  background-image: url("../img/dff63979.sprites-index@2x.png");
+  background-size: 400px 400px;
+}
+.topbar .right-menu {
+  margin-right: 16px;
+}
+@media only screen and (min-width: 768px) {
+  a:active {
+    display: none;
+  }
+  .topbar .left-menu {
+    order: 2;
+    flex: auto;
+  }
+  .topbar .left-menu div {
+    display: none;
+  }
+  .topbar .left-menu .more-list {
+    display: flex;
+    position: static;
+    border: none;
+    padding: 0;
+    margin: -16px;
+    justify-content: space-around;
+  }
+  .topbar .left-menu .more-list li {
+    width: auto;
+    border-bottom: none;
+    margin: 0;
+  }
+  .topbar .logo {
+    order: 1;
+  }
+  .topbar .right-menu {
+    order: 3;
+  }
+}
+/*# sourceMappingURL=./index.css.map */
